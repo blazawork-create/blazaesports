@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Blaza Esports</title>
+</head>
+<body>
+
+  <h1>Admin Dashboard</h1>
+
+  <h3>Add Tournament</h3>
+  <input id="tournamentName" placeholder="Tournament Name" />
+  <button onclick="addTournament()">Add</button>
+
+  <script>
+    function addTournament() {
+      const name = document.getElementById('tournamentName').value;
+      if(name.trim() === '') {
+        alert('Please enter a tournament name');
+        return;
+      }
+      alert('Tournament Added: ' + name);
+      document.getElementById('tournamentName').value = '';
+    }
+  </script>
+
+</body>
+</html>
